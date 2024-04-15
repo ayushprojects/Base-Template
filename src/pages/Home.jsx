@@ -61,12 +61,26 @@ function Home() {
         <>
             <Header />
             <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Services />
-            <Timeline />
-            <Testimonial />
+            <About
+                about={{
+                    name: 'John Doe',
+                    title: 'Software Developer',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    address: 'Los Angeles, America',
+                    phoneNumber: '+91-9212321321',
+                    contactEmail: 'portfolio3@gmail.com',
+                    quote: 'Live the Life as you want',
+                    exp_year: '5',
+                    some_total: '90',
+                    subTitle: 'I develop 3D visuals, user interfaces, and web applications',
+                }}
+            />
+
+            <Skills data={sortedFilteredSkills} />
+            <Projects data={sortedFilteredProject} />
+            <Services data={filteredServices} />
+            <Timeline data={filteredEducation} />
+            <Testimonial data={filteredTestimonials} />
             <Contact />
         </>
     );
